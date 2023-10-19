@@ -60,3 +60,24 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+broker-cm
+*/}}
+{{- define "rocketmq.broker.configmap.fullname" -}}
+{{ include "rocketmq.fullname" . }}-broker-cm
+{{- end }}
+
+{{/*
+nameserver
+*/}}
+{{- define "rocketmq.nameserver.fullname" -}}
+{{ include "rocketmq.fullname" . }}-nameserver
+{{- end }}
+
+{{/*
+dashboard
+*/}}
+{{- define "rocketmq.dashboard.fullname" -}}
+{{ include "rocketmq.fullname" . }}-dashboard
+{{- end }}

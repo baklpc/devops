@@ -2,7 +2,7 @@
 ## 使用此文档部署，需要自行解决 storageClass 问题 (ceph, nfs, 公有云提供的 nfs)
 
 # 副本个数
-replicaCount: 3
+replicaCount: 1
 
 persistentVolume: # 是否存储持久化
   enabled: true     # 启用持久化存储
