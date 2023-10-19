@@ -2,9 +2,9 @@
 clusterName: "cluster-space"
 
 broker:
-  # 3个 master 节点，每个 master 具有1个副节点，共6个 broker 节点
+  # 1个 master 节点，每个 master 具有1个副节点，共6个 broker 节点
   size:
-    master: 3
+    master: 1
     replica: 1
 
   persistence:
@@ -35,7 +35,7 @@ broker:
         memory: 512Mi
 
 nameserver:
-  replicaCount: 3
+  replicaCount: 1
 
   resources:
     limits:
