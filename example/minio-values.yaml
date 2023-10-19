@@ -19,7 +19,7 @@ nodeSelector: {}
 # console 端口 ingress 定义，web访问 Minio
 ingress:
   enabled: true
-  ingressClassName: "nginx"
+#  ingressClassName: "nginx"
   hostname: minio.space.org
   path: /
   pathType: ImplementationSpecific
@@ -28,7 +28,6 @@ ingress:
 # api 接口 ingress 定义，代码访问 MInio
 apiIngress:
   enabled: true
-  ingressClassName: "nginx"
   hostname: minio-api.space.org
   path: /
   pathType: ImplementationSpecific

@@ -14,7 +14,7 @@ persistentVolume: # 是否存储持久化
 
 ingress: # 是否使用nginx暴露域名或端口
   enabled: true     # 启用 ingress
-  ingressClassName: "nginx"
+#  ingressClassName: "nginx"
   hostname: nacos.space.org
 
 mysql:
