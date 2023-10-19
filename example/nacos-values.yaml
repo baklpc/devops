@@ -1,0 +1,39 @@
+## 全局配置定义 storageClass: ""，会使用集群配置的 openebs 提供的 storageClass，
+## 使用此文档部署，需要自行解决 storageClass 问题 (ceph, nfs, 公有云提供的 nfs)
+
+# 副本个数
+replicaCount: 3
+
+persistentVolume: # 是否存储持久化
+  enabled: true     # 启用持久化存储
+  storageClass: "local"     # 设置 storageClass
+  accessMode: ReadWriteOnce
+  annotations: {}
+  # helm.sh/resource-policy: keep
+  size: 10Gi  # 大小为 10G
+
+ingress: # 是否使用nginx暴露域名或端口
+  enabled: true     # 启用 ingress
+  annotations: { }
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
+  ingressClassName: ""
+  path: /nacos
+  pathType: ImplementationSpecific
+  hosts:
+    - nacos.space.org    # 设置域名
+  tls: [ ] # 未启动 https认证
+
+mysql:
+  enabled: false
+  # 启用外部存储，而不是自建 mysql 主从
+  # 可以自建 nacos 用户，这里此处直接使用了 root 账户进行 mysql 集群登陆
+  # 需要去数据库新建 nacos 数据库
+  external:
+    mysqlMasterHost: "mysql-master-headless"
+    mysqlDatabase: "nacos"
+    mysqlMasterPort: "3306"
+    mysqlMasterUser: "root"
+    mysqlMasterPassword: "123456"
+    mysqlSlaveHost: "mysql-slave-headless"
+    mysqlSlavePort: "123456"
