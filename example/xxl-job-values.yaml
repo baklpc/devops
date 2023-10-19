@@ -16,9 +16,9 @@ ingress:
           pathType: ImplementationSpecific
 resources:
   limits:
-    cpu: 200m
+    cpu: 500m
     memory: 512Mi
   requests:
-    cpu: 100m
-    memory: 256Mi
+    cpu: 200m
+    memory: 512Mi
 
