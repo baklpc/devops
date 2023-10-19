@@ -1,0 +1,42 @@
+# minio 部署模式 (`standalone` or `distributed`)
+mode: distributed
+
+# minio 认证账户，web登陆账户
+auth:
+  rootUser: admin
+  #密码必须大于8位
+  rootPassword: "admin123456"
+
+# 创建的默认桶,standalone才能配置
+defaultBuckets: ""
+
+# distributed 模式下，服务部署数量，必须大于4个
+statefulset:
+  replicaCount: 4
+
+nodeSelector: {}
+
+# console 端口 ingress 定义，web访问 Minio
+ingress:
+  enabled: true
+  ingressClassName: "nginx"
+  hostname: minio.space.org
+  path: /
+  pathType: ImplementationSpecific
+  servicePort: minio-console
+
+# api 接口 ingress 定义，代码访问 MInio
+apiIngress:
+  enabled: true
+  ingressClassName: "nginx"
+  hostname: minio-api.space.org
+  path: /
+  pathType: ImplementationSpecific
+  servicePort: minio-api
+# pvc 定义
+persistence:
+  enabled: true
+  mountPath: /data
+  accessModes:
+    - ReadWriteOnce
+  size: 20Gi
