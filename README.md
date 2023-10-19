@@ -61,3 +61,5 @@ helm upgrade --install seata ./seata -f example/seata-values.yaml
 helm upgrade --install skywalking ./skywalking -f example/skywalking-values.yaml 
 
 ```
+
+skywalking seata es 还未部署
