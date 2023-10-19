@@ -24,4 +24,4 @@ maintainers:
 name: nacos
 sources:
 - https://github.com/alibaba/nacos
-version: 2.1.4
+version: 1.0.0
