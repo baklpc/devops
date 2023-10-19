@@ -1,1 +1,63 @@
-# devops
+# [mysql](mysql)
+
+```
+
+helm upgrade --install mysql ./mysql -f example/mysql-values.yaml 
+
+```
+
+# [redis](redis)
+
+```
+
+helm upgrade --install redis ./redis -f example/redis-values.yaml 
+
+```
+
+# [nacos](nacos)
+
+```
+
+helm upgrade --install nacos ./nacos -f example/nacos-values.yaml 
+
+```
+
+# [minio](minio)
+
+```
+
+helm upgrade --install minio ./minio -f example/minio-values.yaml 
+
+```
+
+# [rocketmq](rocketmq)
+
+```
+
+helm upgrade --install rocketmq ./rocketmq -f example/rocketmq-values.yaml 
+
+```
+
+# [xxl-job](xxl-job)
+
+```
+
+helm upgrade --install xxl-job ./xxl-job -f example/xxl-job-values.yaml 
+
+```
+
+# [seata](seata)
+
+```
+
+helm upgrade --install seata ./seata -f example/seata-values.yaml 
+
+```
+
+# [skywalking](skywalking)
+
+```
+
+helm upgrade --install skywalking ./skywalking -f example/skywalking-values.yaml 
+
+```
