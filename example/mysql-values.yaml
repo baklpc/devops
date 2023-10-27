@@ -1,6 +1,8 @@
 architecture: replication
 auth:
   rootPassword: "123456"
+  username: space
+  password: "123456"
 primary:
   resources:
     limits:
