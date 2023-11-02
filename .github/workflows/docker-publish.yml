@@ -54,8 +54,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max,image-manifest=true
+#          cache-from: type=gha
+#          cache-to: type=gha,mode=max,image-manifest=true
       - name: Sign the published Docker image
         if: ${{ github.event_name != 'pull_request' }}
         env:
