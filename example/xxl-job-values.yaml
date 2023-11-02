@@ -8,7 +8,6 @@ database:
 
 ingress:
   enabled: true
-#  className: "nginx"
   hosts:
     - host: xxl-job.space.org
       paths:

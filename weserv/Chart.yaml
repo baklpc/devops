@@ -1,0 +1,9 @@
+apiVersion: v2
+name: weserv
+description: weserv
+
+type: application
+
+version: 1.0.0
+
+appVersion: "5.x"

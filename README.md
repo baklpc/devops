@@ -30,6 +30,14 @@ helm upgrade --install minio ./minio -f example/minio-values.yaml
 
 ```
 
+# [weserv](weserv)
+```
+
+helm upgrade --install weserv ./weserv -f example/weserv-values.yaml 
+
+```
+
+
 # [rocketmq](rocketmq)
 
 ```

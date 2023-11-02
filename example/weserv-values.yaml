@@ -1,0 +1,13 @@
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 32460
+
+ingress:
+  enabled: true
+  hosts:
+    - host: img.space.org
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
