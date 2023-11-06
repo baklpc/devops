@@ -70,4 +70,12 @@ helm upgrade --install skywalking ./skywalking -f example/skywalking-values.yaml
 
 ```
 
+# [harbor](harbor)
+
+```
+
+helm upgrade --install harbor ./harbor -f example/harbor-values.yaml 
+
+```
+
 skywalking seata es 还未部署

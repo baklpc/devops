@@ -1,0 +1,25 @@
+expose:
+  tls:
+    enabled: false    # 关闭tls安全加密认证（如果开启需要配置证书）
+  ingress:
+    hosts:
+      core: harbor.space.org
+externalURL: http://harbor.space.org #必须和 ingress 配置一致
+# 持久化存储配置部分
+persistence:
+  enabled: true   # 开启持久化存储
+harborAdminPassword: "Harbor12345"   # admin初始密码，不需要修改
+metrics:
+  enabled: true  # 是否启用监控组件（可以使用Prometheus监控Harbor指标，具体见本专栏文章），非必须操作
+  core:
+    path: /metrics
+    port: 8001
+  registry:
+    path: /metrics
+    port: 8001
+  jobservice:
+    path: /metrics
+    port: 8001
+  exporter:
+    path: /metrics
+    port: 8001
