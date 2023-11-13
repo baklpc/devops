@@ -1,0 +1,15 @@
+nameOverride: skywalking
+elasticsearch:
+  enabled: false
+  config:               # For users of an existing elasticsearch cluster,takes effect when `elasticsearch.enabled` is false
+    port:
+      http: 9200
+    host: elasticsearch-logging-data.svc # es service on kubernetes or host
+
+oap:
+  image:
+    tag: 9.2.0
+  storageType: elasticsearch
+ui:
+  image:
+    tag: 9.2.0

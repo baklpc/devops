@@ -66,7 +66,7 @@ helm upgrade --install seata ./seata -f example/seata-values.yaml
 
 ```
 
-helm upgrade --install skywalking ./skywalking -f example/skywalking-values.yaml 
+helm upgrade --install skywalking oci://registry-1.docker.io/apache/skywalking-helm --version 4.3.0 -f example/skywalking-values.yaml 
 
 ```
 
