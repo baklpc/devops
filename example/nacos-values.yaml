@@ -4,6 +4,32 @@
 # 副本个数
 replicaCount: 1
 
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 50m
+    memory: 256Mi
+
+extraEnvVars:
+  - name: PREFER_HOST_MODE
+    value: "hostname"
+  - name: TZ
+    value: "Asia/Shanghai"
+  - name: SPRING_DATASOURCE_PLATFORM
+    value: "mysql"
+  - name: JVM_XMS
+    value: 128m
+  - name: JVM_XMX
+    value: 128m
+  - name: JVM_XMN
+    value: 128m
+  - name: JVM_MS
+    value: 8m
+  - name: JVM_MMS
+    value: 256m
+
 persistentVolume: # 是否存储持久化
   enabled: true     # 启用持久化存储
   storageClass: "local"     # 设置 storageClass

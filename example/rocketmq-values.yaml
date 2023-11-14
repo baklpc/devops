@@ -14,22 +14,22 @@ broker:
   # 主节点资源分配
   master:
     brokerRole: ASYNC_MASTER
-    jvmMemory: "-Xms512m -Xmx512m"
+    jvmMemory: "-Xms256m -Xmx256m"
     resources:
       limits:
-        cpu: 1
-        memory: 1Gi
-      requests:
         cpu: 500m
+        memory: 768Mi
+      requests:
+        cpu: 100m
         memory: 512Mi
 
   # 副节点资源分配
   replica:
-    jvmMemory: "-Xms512m -Xmx512m"
+    jvmMemory: "-Xms256m -Xmx256m"
     resources:
       limits:
         cpu: 500m
-        memory: 1Gi
+        memory: 768Mi
       requests:
         cpu: 100m
         memory: 512Mi
@@ -39,11 +39,11 @@ nameserver:
 
   resources:
     limits:
-      cpu: 1
-      memory: 1Gi
+      cpu: 500
+      memory: 512Mi
     requests:
       cpu: 50m
-      memory: 500Mi
+      memory: 256Mi
 
 dashboard:
   enabled: true
