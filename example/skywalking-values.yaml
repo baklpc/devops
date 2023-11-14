@@ -9,7 +9,7 @@ oap:
 
 ui:
   image:
-    tag: 9.6.0
+    tag: 9.2.0
   ingress:
     enabled: true
     hosts:
