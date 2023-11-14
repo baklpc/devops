@@ -78,4 +78,4 @@ helm upgrade --install harbor ./harbor -f example/harbor-values.yaml
 
 ```
 
-skywalking seata es 还未部署
+seata es 还未部署
