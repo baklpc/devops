@@ -45,6 +45,8 @@ spec:
           env:
             - name: SPRING_CONFIG_IMPORT
               value: optional:configtree:/var/run/secrets/spring/
+            - name: JAVA_TOOL_OPTIONS
+              value: {{ .Values.javaToolOptions }}
           volumeMounts:
             - name: config
               mountPath: /config

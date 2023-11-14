@@ -14,6 +14,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+javaToolOptions: "-Xms256m -Xmx256m -XX:MaxMetaspaceSize=256m"
+
 ## configure the database detail
 database:
   url:
