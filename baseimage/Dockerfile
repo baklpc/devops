@@ -5,7 +5,7 @@ RUN curl -O https://arthas.aliyun.com/arthas-boot.jar
 FROM openjdk:17-ea-jdk-slim
 
 # 安装 fontconfig 和 ttf-dejavu字体
-RUN apt install fontconfig
+RUN apt update && apt install fontconfig
 
 COPY --from=skyBuilder /skywalking/agent /skywalking
 
