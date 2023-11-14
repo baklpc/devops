@@ -1,5 +1,5 @@
 # minio 部署模式 (`standalone` or `distributed`)
-mode: distributed
+mode: standalone
 
 # minio 认证账户，web登陆账户
 auth:

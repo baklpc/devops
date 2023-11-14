@@ -1,16 +1,23 @@
 nameOverride: skywalking
+
 oap:
   image:
-    tag: 9.6.0
+    tag: 9.2.0
+  replicas: 1
   storageType: elasticsearch
+  javaOpts: -Xms512m -Xmx768m
 
 ui:
   image:
     tag: 9.6.0
+  ingress:
+    enabled: true
+    hosts:
+      - skywalking.space.org
 
 elasticsearch:
   enabled: false
   config:               # For users of an existing elasticsearch cluster,takes effect when `elasticsearch.enabled` is false
     port:
       http: 9200
-    host: elasticsearch-logging-data.svc # es service on kubernetes or host
+    host: elasticsearch-logging-data.kubesphere-logging-system.svc # es service on kubernetes or host
