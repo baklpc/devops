@@ -3,8 +3,8 @@ expose:
     enabled: false    # 关闭tls安全加密认证（如果开启需要配置证书）
   ingress:
     hosts:
-      core: harbor.space.org
-externalURL: http://harbor.space.org #必须和 ingress 配置一致
+      core: harbor.k8s.orb.local
+externalURL: http://harbor.k8s.orb.local #必须和 ingress 配置一致
 # 持久化存储配置部分
 persistence:
   enabled: true   # 开启持久化存储

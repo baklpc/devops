@@ -34,14 +34,13 @@ persistentVolume: # 是否存储持久化
   enabled: true     # 启用持久化存储
   storageClass: "local"     # 设置 storageClass
   accessMode: ReadWriteOnce
-  annotations: {}
+  annotations: { }
   # helm.sh/resource-policy: keep
   size: 10Gi  # 大小为 10G
 
 ingress: # 是否使用nginx暴露域名或端口
   enabled: true     # 启用 ingress
-#  ingressClassName: "nginx"
-  hostname: nacos.space.org
+  hostname: nacos.k8s.orb.local
 
 mysql:
   enabled: false
@@ -49,10 +48,10 @@ mysql:
   # 可以自建 nacos 用户，这里此处直接使用了 root 账户进行 mysql 集群登陆
   # 需要去数据库新建 nacos 数据库
   external:
-    mysqlMasterHost: "mysql-master-headless"
+    mysqlMasterHost: "mysql-headless"
     mysqlDatabase: "nacos"
     mysqlMasterPort: "3306"
     mysqlMasterUser: "root"
     mysqlMasterPassword: "123456"
-    mysqlSlaveHost: "mysql-slave-headless"
+    mysqlSlaveHost: "mysql-headless"
     mysqlSlavePort: "123456"

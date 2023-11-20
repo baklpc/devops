@@ -79,3 +79,14 @@ helm upgrade --install harbor ./harbor -f example/harbor-values.yaml
 ```
 
 seata es 还未部署
+
+
+# 创建证书
+mkcert "*.k8s.orb.local"
+
+kubectl create secret tls tls-cert \
+--key=_wildcard.k8s.orb.local-key.pem \
+--cert=_wildcard.k8s.orb.local.pem
+
+### traefik使用证书
+helm install traefik traefik/traefik --set tlsStore.default.defaultCertificate.secretName=tls-cert

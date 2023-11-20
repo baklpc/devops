@@ -1,4 +1,4 @@
-clusterName: "rocketmq-cluster-a"
+clusterName: "rocketmq-cluster"
 
 image:
   repository: "apache/rocketmq"

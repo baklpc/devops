@@ -14,36 +14,36 @@ broker:
   # 主节点资源分配
   master:
     brokerRole: ASYNC_MASTER
-    jvmMemory: "-Xms256m -Xmx256m"
+    jvmMemory: "-Xms128m -Xmx128m"
     resources:
       limits:
-        cpu: 500m
-        memory: 768Mi
-      requests:
-        cpu: 100m
+        cpu: 200m
         memory: 512Mi
+      requests:
+        cpu: 10m
+        memory: 128Mi
 
   # 副节点资源分配
   replica:
-    jvmMemory: "-Xms256m -Xmx256m"
+    jvmMemory: "-Xms128m -Xmx128m"
     resources:
       limits:
-        cpu: 500m
-        memory: 768Mi
-      requests:
-        cpu: 100m
+        cpu: 200m
         memory: 512Mi
+      requests:
+        cpu: 10m
+        memory: 128Mi
 
 nameserver:
   replicaCount: 1
 
   resources:
     limits:
-      cpu: 500
+      cpu: 100
       memory: 512Mi
     requests:
-      cpu: 50m
-      memory: 256Mi
+      cpu: 10m
+      memory: 128Mi
 
 dashboard:
   enabled: true
@@ -51,7 +51,6 @@ dashboard:
 
   ingress:
     enabled: true
-#    className: "nginx"
     hosts:
       - host: rocketmq.space.org
     tls: []
