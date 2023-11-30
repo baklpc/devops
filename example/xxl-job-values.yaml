@@ -11,7 +11,7 @@ ingress:
   hosts:
     - host: xxl-job.space.org
       paths:
-        - path: /xxl-job-admin
+        - path: /
           pathType: ImplementationSpecific
 resources:
   limits:

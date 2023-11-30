@@ -37,7 +37,7 @@ properties:
   server:
     port: 8080
     servlet:
-      context-path: /xxl-job-admin
+      context-path: /
   spring:
     datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver

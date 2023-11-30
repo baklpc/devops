@@ -94,6 +94,9 @@ service:
     http:
       port: 8848  # Service port number for client-a port.
       protocol: TCP  # Service port protocol for client-a port.
+    grpc:
+      port: 9848  # Service port number for client-a port.
+      protocol: TCP  # Service port protocol for client-a port.
       ## Use nodePorts to requets some specific ports when usin NodePort
       # nodePort: 30020  # <to set explicitly, choose port between 30000-32767> 默认会自动生成
   ## @param service.loadBalancerSourceRanges Addresses that are allowed when service is LoadBalancer

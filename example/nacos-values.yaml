@@ -7,7 +7,7 @@ replicaCount: 1
 resources:
   limits:
     cpu: 500m
-    memory: 512Mi
+    memory: 768Mi
   requests:
     cpu: 50m
     memory: 256Mi
@@ -48,10 +48,10 @@ mysql:
   # 可以自建 nacos 用户，这里此处直接使用了 root 账户进行 mysql 集群登陆
   # 需要去数据库新建 nacos 数据库
   external:
-    mysqlMasterHost: "mysql-headless"
+    mysqlMasterHost: "mysql-headless.cloud.svc"
     mysqlDatabase: "nacos"
     mysqlMasterPort: "3306"
     mysqlMasterUser: "root"
     mysqlMasterPassword: "123456"
-    mysqlSlaveHost: "mysql-headless"
+    mysqlSlaveHost: "mysql-headless.cloud.svc"
     mysqlSlavePort: "123456"
