@@ -85,7 +85,7 @@ properties:
       static-locations: classpath:/static/
   xxl:
     job:
-      accessToken: "default_token"
+      accessToken: "DOiz7Y1qoBdjBbh7rvE6dSF5yQKBGhEm"
       i18n: zh_CN
       logretentiondays: 30
       triggerpool:
