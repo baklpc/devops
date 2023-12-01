@@ -10,7 +10,7 @@ helm upgrade --install mysql ./mysql -f example/mysql-values.yaml
 
 ```
 
-helm upgrade --install redis ./redis -f example/redis-values.yaml 
+helm upgrade --install redis-cluster ./redis-cluster -f example/redis-values.yaml 
 
 ```
 
