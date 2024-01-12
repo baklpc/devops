@@ -92,4 +92,4 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ENV LANG="zh_CN.UTF-8"
 
-ENV JAVA_TOOL_OPTIONS=-javaagent:/skywalking/skywalking-agent.jar
+ENV JAVA_OPTS=-javaagent:/skywalking/skywalking-agent.jar
