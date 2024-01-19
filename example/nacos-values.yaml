@@ -6,11 +6,11 @@ replicaCount: 1
 
 resources:
   limits:
-    cpu: 500m
-    memory: 768Mi
+    cpu: 1000m
+    memory: 1024Mi
   requests:
-    cpu: 50m
-    memory: 256Mi
+    cpu: 500m
+    memory: 512Mi
 
 extraEnvVars:
   - name: PREFER_HOST_MODE

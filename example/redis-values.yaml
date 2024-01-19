@@ -1,3 +1,4 @@
 global:
   redis:
     password: "123456"
+fullnameOverride: "redis"
