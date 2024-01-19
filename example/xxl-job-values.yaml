@@ -1,7 +1,7 @@
 replicaCount: 1
 
 database:
-  url: mysql-headless
+  url: mysql-master-headless
   user: root
   password: "123456"
   db: xxl_job
