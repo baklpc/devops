@@ -1,0 +1,13 @@
+service:
+  type: NodePort
+  loadBalancerIP: ""
+  port: 8388
+
+
+shadowsocks:
+  method: "aes-256-gcm"
+  password:
+    plainText: "123456"
+  dnsServers:
+    - "10.233.0.3"
+  timeout: "300"
